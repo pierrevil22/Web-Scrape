@@ -28,7 +28,7 @@ if (process.env.MONGODB_URI) {
 } else {
   mongoose.connect(databaseUri);
 }
-
+/*
 var db = mongoose.connection;
 
 db.on("error", function(error) {
@@ -38,6 +38,7 @@ db.on("error", function(error) {
 db.once("open", function() {
   console.log("Mongoose connection sucessful.");
 });
+*/
 
 //set engine and default for handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -53,7 +54,7 @@ require("./config/routes")(router);
 app.use(router);
 
 //set port
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 
 //setup listener
 app.listen(port, function() {
