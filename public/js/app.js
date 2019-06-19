@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    console.log('from app.js')
     var $winwidth = $(window).width();
     $("img.main-img").attr({
         width: $winwidth
