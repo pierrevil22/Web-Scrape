@@ -53,7 +53,7 @@ require("./config/routes")(router);
 app.use(router);
 
 //set port
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 80;
 
 //setup listener
 app.listen(port, function() {
